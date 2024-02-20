@@ -10,3 +10,8 @@ Hyperlinks
 Icons
 Turn in link on Moodle.
 
+#To deploy:
+
+sudo mkdir /var/www/html/resumeboot
+sudo chown ubuntu /var/www/html/resumeboot
+make
