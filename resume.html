@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
     <title>My Resume</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,77 +13,267 @@
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
     <!-- Custom CSS -->
-    <style>
-        body {
-            background: linear-gradient(to right, #7C580B, #0B707C); /*To add nice background gradient*/
-            font-family: 'Muli', sans-serif;
-        }
-        .navbar {
-            background-color: #343a40;
-            padding: 1rem;
-        }
-        .navbar-brand {
-            color: #ffffff;
-            font-size: 1.5rem;
-        }
-        .navbar-nav .nav-link {
-            color: #ffffff;
-            font-size: 1rem;
-            padding: 0.5rem 1rem;
-             background-color: #DD95EE;
-             border: none;
-        	border-radius: 5px;
-        	margin: 0 0.5rem;
-        	transition: background-color 1.0s;
-    }
-    .navbar-nav .nav-link:hover {
-        background-color: #0056b3; /* Darker blue on hover effect */
-        }
-        .img-profile {
-            border: 5px solid #ffffff;
-            text-align: center;
-        }
-    </style>
+    <link href="resume.CSS" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
-        <a class="navbar-brand" href="#page-top"> <font face = "Times New Roman" size = "8">My Resume Homepage</font><br /></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                <li class="nav-item"><a class="nav-link" href="images.html">Images</a></li>
-            </ul>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    More
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="https://cs.kenyon.edu/index.php/comp-318-software-development-s24/online-resume/">About</a></li>
-                    <li><a class="dropdown-item" href="http://3.143.211.104/wisdomresume/wisdomresume.html">Resume sans Bootstrap</a></li>
-                    <li><a class="dropdown-item" href="https://www.kenyon.edu/">About Kenyon College</a></li>
-                </ul>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Wisdom Akanwe</span>
+       <span class="d-none d-lg-block text-center" style="max-width: 300px; margin:  10px;">
+    <img id="profilePicture" class="img-fluid img-profile rounded-circle" src="https://media.licdn.com/dms/image/D4E03AQFYIXacQSugCA/profile-displayphoto-shrink_800_800/0/1695837402125?e=2147483647&v=beta&t=xs6WRedWqzgiSN9DeBxVa0WW2kWcc9XZgJtfHGyPoiI" alt="Profile Picture">
+</span>
+
+<button type="button" id="shrinkButton" onclick="shrinkImage()" class="btn btn-primary">See more</button>
+
+<style>
+    .shrinked {
+        max-width: 0px;
+        transition: max-width 0.5s ease; /* Add smooth transition effect */
+    }
+</style>
+
+<script>
+    function shrinkImage() {
+        var image = document.getElementById('profilePicture');
+        image.classList.toggle('shrinked');
+    }
+</script>
+
+
+
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About Me</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+        </ul>
+    </div>
+</nav>
+    <!-- Page Content -->
+    
+    <div class="m-0">
+        <!-- About -->
+        <section class="resume-section" id="about">
+            <div class="resume-section-content">
+                <h1 class="mb-0">Wisdom <span class="text-primary">Akanwe</span></h1>
+                <div class="lead mb-5">101 E Brooklyn Street, Gambier OH 43022 · <a href="mailto:name@email.com">akanwe1@kenyon.edu</a></div>
+                <p class="lead mb-5">My name is Wisdom Akanwe. I am a student at Kenyon College majoring in Mathematics & Statistics with a minor in Computational Science. I have a passion for data analysis and programming.</p>
+                <div class="social-icons">
+                    <a class="social-icon" href="https://www.linkedin.com/in/wisdom-akanwe-953aaa24b/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-icon" href="https://github.com/Wiz1702"><i class="fab fa-github"></i></a>
+                    <a class="social-icon" href="https://www.instagram.com/wisdomakanwe/"><i class="fab fa-instagram"></i></a>
+                    <a class="social-icon" href="https://www.facebook.com/wisdom.akanwe"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0">
+         <!-- Experience Section -->
+    <section class="resume-section" id="experience">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Work Experience</h2>
+            <!-- Your work experience items here -->
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Summer Intern and Junior Manager</h3>
+                    <div class="subheading mb-3"> PowerCom Africa</div>
+                    <p>Collaborated with the engineering team to develop smart electronic meters in Accra.
+                    Assisted in testing 50 prototypes to ensure compliance with industry standards and regulatory.
+                    Conducted 30+ maintenance checks and firmware updates to ensure optimal functionality.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">June 2021-August 2021</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Welfare Intern</h3>
+                    <div class="subheading mb-3">International Model United Nations</div>
+                    <p>Innovated publicity strategies to enhance the organization's IoT presence.
+                    Collaborated with social media managers to increase marketing and social media reach.
+                    Led platform discussion of over 120 youth across the world on global financial literacy.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">January 2023-July 2023</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Engineering Lead</h3>
+                    <div class="subheading mb-3">Ashesi Innovation Experience</div>
+                    <p>Collaborated with a diverse team to design and prototype a heat sensor using Arduino.
+                    The sensor aimed at detecting potential overflows in filling petroleum vessels to prevent hazardous situations and improve safety in the oil and gas industry.
+                    Won the 1st runner up innovative design.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">July 2019-August 2019</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Researcher</h3>
+                    <div class="subheading mb-3">Navrongo Health Research Centre</div>
+                    <p>Analyzed data from 10 medical records and 5 years of power-cuts history.
+                    Identified a correlation power cut linked to a 23% increase in maternal mortality and a 17% increase in infant mortality.
+                    Presented findings in reports to support data-driven decisions in healthcare and energy management.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">September 2021-December 2021</span></div>
+            </div>
+            <div class="row"></div> <!-- Added this empty row for spacing -->
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Mentor/ SAT Tutor</h3>
+                    <div class="subheading mb-3">Young Achievers Foundation</div>
+                    <p>Developed customized study plans and strategies for over 30 students, tailored to their unique learning styles, strengths, and areas of improvement.
+                    Facilitated students in mastering critical academic concepts and test-taking techniques, resulting in an impressive average score improvement of 50 points in their aptitude tests.
+                    </p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">November 2022 - February 2023</span></div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Image Section -->
-    <div class="img-profile">
-         <img id="profilePicture" class="img-fluid img-profile rounded-circle" src="https://scontent.fbkl1-1.fna.fbcdn.net/v/t39.30808-6/428605917_794101662736332_3538369267990314284_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=3635dc&_nc_ohc=f07naHB7wgEAX9FyJil&_nc_ht=scontent.fbkl1-1.fna&oh=00_AfCmo-hyBeEt5kfdV2GEfESXMY_vs4rKURO-4BQjjiJcug&oe=65DA65F3" alt="Profile Picture">
+        </section>
+        <hr class="m-0">
+        <!-- Education -->
+        <section class="resume-section" id="education">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Education</h2>
+                <!-- Your education items here -->
+                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Kenyon College</h3>
+                            <div class="subheading mb-3">Bachelor of Science</div>
+                            <div>Mathematics and Statistics - Computer Science Concentration</div>
+                            <p>GPA: 4.00</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2023 - May 2027</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Notre Dame Seminary Senior High School</h3>
+                            <div class="subheading mb-3">General Science</div>
+                            <p>GPA:4.00</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">September 2017 - September 2020</span></div>
+                </div>
+            </section>
+            </div>
+        </section>
+        <hr class="m-0">
+        <!-- Skills -->
+        <section class="resume-section" id="skills">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Skills</h2>
+                <!-- Your skills items here -->
+                <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                       <ul class="list-inline">
+   					
+				    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+    				<li class="list-inline-item"><i class="fab fa-python"></i></li>
+    				C++<li class="list-inline-item"><i class="fab fa-cpp"></i></li>
+    				Arduino: <li class="list-inline-item"><i class="fab fa-arduino"></i></li>
+    				Ruby: <li class="list-inline-item"><i class="fab fa-ruby"></i></li>
+					<li class="list-inline-item"><i class="fab fa-cuttlefish"></i></li>
+    				</ul>
+                </ul>
+                <div class="subheading mb-3">Professional Associations</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                           Business and Finance Committee-Kenyon College
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Academic Affairs Committee-Kenyon College
+                    	 </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Google Developers Association-Kenyon College
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                           Microsoft Ambassadors
+                        </li>
+                    </ul>
+            </div>
+        </section>
+        <hr class="m-0">
+        <!-- Interests -->
+        <section class="resume-section" id="interests">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Interests</h2>
+                <!-- Your interests content here -->
+                <p>Studying is a passion,  you can catch me scrolling online for new fun tricks on computer programmings, or playing Video games</p>
+                    <p class="mb-0">I love watching History Documents as well</p>
+            </div>
+        </section>
+        <hr class="m-0">
+        <!-- Awards -->
+        <section class="resume-section" id="awards">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Awards & Certifications</h2>
+                <!-- Your awards items here -->
+                <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Overall Best intern award, PowerCom Africa (2021)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Community Youth Research engagement award, Navrongo-(2021)
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            1
+                            <sup>st</sup>
+                            st Runner up, most innovative design, Ashesi Innovation Experience-(2019)
+                        </li>
+                        
+                    </ul>
+            </div>
+        </section>
     </div>
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
 
-    <div class="lead mb-5">101 E Brooklyn Street, Gambier OH 43022 · <a href="mailto:name@email.com">akanwe1@kenyon.edu</a></div>
+</body>
+</html>
+<body>
+<table border="1">
+  <tr>
+    <th>Programming Language</th>
+    <th>Proficiency</th>
+  </tr>
+  <tr>
+    <td>Python</td>
+    <td>Advanced</td>     
+  </tr>
+  <tr><td>Ruby</td>
+    <td>Beginner</td>
+    </tr>
+    <tr><td>C++</td>
+    <td>Intermediate</td>
+    </tr>
+    <tr><td>C</td>
+    <td>High Proficiency</td>
+    </tr>
+    <tr> <td>HTML</td>
+    <td>Fairly Proficient</td>
+    </tr>
+    
+  <!--I can Add more rows as needed -->
+</table>
+</body>
 
-    <!-- Footer -->
+<p>I hope you had fun getting to know me, take this quiz to see if you know me well</p>
+<button onclick="window.open('https://docs.google.com/document/d/1QSZ94ASF0lWfdEH2XeNstzUX7tiRCvK1kkqjpm3gPYY/edit', '_blank')" class="btn btn-primary">Take a Quiz About Me</button>
+ 
+<!-- Footer -->
     <footer>
         <p>&copy; 2024 Wisdom Akanwe</p>
     </footer>
-
-    <!-- Bootstrap core JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
