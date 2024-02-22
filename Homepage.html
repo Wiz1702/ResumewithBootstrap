@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: linear-gradient(to right, #7C580B, #0B707C); /*To add nice background gradient*/
+            font-family: 'Muli', sans-serif;
+        }
+        .navbar {
+            background-color: #343a40;
+            padding: 1rem;
+        }
+        .navbar-brand {
+            color: #ffffff;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+             background-color: #DD95EE;
+             border: none;
+        	border-radius: 5px;
+        	margin: 0 0.5rem;
+        	transition: background-color 1.0s;
+    }
+    .navbar-nav .nav-link:hover {
+        background-color: #0056b3; /* Darker blue on hover effect */
+        }
+        .img-profile {
+            border: 5px solid #ffffff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+        <a class="navbar-brand" href="#page-top"> <font face = "Times New Roman" size = "8">My Resume Homepage</font><br /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                <li class="nav-item"><a class="nav-link" href="images.html">Images</a></li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    More
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="https://cs.kenyon.edu/index.php/comp-318-software-development-s24/online-resume/">About</a></li>
+                    <li><a class="dropdown-item" href="http://3.143.211.104/wisdomresume/wisdomresume.html">Resume sans Bootstrap</a></li>
+                    <li><a class="dropdown-item" href="https://www.kenyon.edu/">About Kenyon College</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Section -->
+    <div class="img-profile">
+         <img id="profilePicture" class="img-fluid img-profile rounded-circle" src="https://scontent.fbkl1-1.fna.fbcdn.net/v/t39.30808-6/428605917_794101662736332_3538369267990314284_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=3635dc&_nc_ohc=f07naHB7wgEAX9FyJil&_nc_ht=scontent.fbkl1-1.fna&oh=00_AfCmo-hyBeEt5kfdV2GEfESXMY_vs4rKURO-4BQjjiJcug&oe=65DA65F3" alt="Profile Picture">
+    </div>
+
+    <div class="lead mb-5">101 E Brooklyn Street, Gambier OH 43022 · <a href="mailto:name@email.com">akanwe1@kenyon.edu</a></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Wisdom Akanwe</p>
+    </footer>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
