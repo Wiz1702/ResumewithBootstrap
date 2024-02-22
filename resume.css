@@ -1,1 +1,26 @@
+body {
+    background: linear-gradient(to right, #7C580B, #0B707C);
+    font-family: 'Muli', sans-serif;
+}
+.navbar {
+    background-color: #343a40;
+    padding: 1rem;
+}
+.navbar-brand {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+.img-profile {
+    border: 5px solid #ffffff;
+    text-align: center;
+}
+.shrinked {
+    max-width: 0px;
+    transition: max-width 0.5s ease;
+}
 
